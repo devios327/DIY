@@ -1,0 +1,16 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 23.02.2012 15:17:36
+
+newmtl 13476_Engine_Piston
+	Ns 32.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9922 0.9922 0.9922
+	Kd 0.9922 0.9922 0.9922
+	Ks 0.1498 0.1498 0.1498
+	Ke 0.0000 0.0000 0.0000
+	map_Ka 13476_Engine_Piston_diff.jpg
+	map_Kd 13476_Engine_Piston_diff.jpg
