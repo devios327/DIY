@@ -20,13 +20,13 @@
 			"mesh":0,
 			"name":"Cylinder",
 			"scale":[
-				2,
-				3.990579128265381,
-				2
+				1.5,
+				4.020578861236572,
+				1.5
 			],
 			"translation":[
 				0,
-				-4.0390625,
+				-3.854804515838623,
 				0
 			]
 		},
@@ -55,15 +55,63 @@
 		},
 		{
 			"mesh":3,
-			"name":"Cylinder.001",
+			"name":"Cylinder.003",
 			"scale":[
-				0.10000002384185791,
-				15.25999927520752,
-				0.10000002384185791
+				2,
+				4.100578784942627,
+				2
+			],
+			"translation":[
+				0,
+				-4.0390625,
+				0
 			]
 		}
 	],
 	"animations":[
+		{
+			"channels":[
+				{
+					"sampler":0,
+					"target":{
+						"node":0,
+						"path":"translation"
+					}
+				},
+				{
+					"sampler":1,
+					"target":{
+						"node":0,
+						"path":"rotation"
+					}
+				},
+				{
+					"sampler":2,
+					"target":{
+						"node":0,
+						"path":"scale"
+					}
+				}
+			],
+			"name":"CylinderAction",
+			"samplers":[
+				{
+					"input":15,
+					"interpolation":"LINEAR",
+					"output":16
+				},
+				{
+					"input":15,
+					"interpolation":"LINEAR",
+					"output":17
+				},
+				{
+					"input":15,
+					"interpolation":"LINEAR",
+					"output":18
+				}
+			]
+		},
 		{
 			"channels":[
 				{
@@ -93,31 +141,32 @@
 				{
 					"input":15,
 					"interpolation":"LINEAR",
-					"output":16
+					"output":19
 				},
 				{
 					"input":15,
 					"interpolation":"LINEAR",
-					"output":17
+					"output":20
 				},
 				{
 					"input":15,
 					"interpolation":"LINEAR",
-					"output":18
+					"output":21
 				}
 			]
 		}
 	],
 	"materials":[
 		{
+			"alphaMode":"BLEND",
 			"doubleSided":true,
-			"name":"Material.002",
+			"name":"Material.004",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
-					0.6453094482421875,
-					1,
-					0,
-					1
+					0.26423341035842896,
+					0.44395989179611206,
+					0.8000000715255737,
+					0.25
 				],
 				"metallicFactor":0,
 				"roughnessFactor":0.5
@@ -137,11 +186,11 @@
 		{
 			"alphaMode":"BLEND",
 			"doubleSided":true,
-			"name":"Material.004",
+			"name":"Material.006",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
-					0.11021058261394501,
-					0.402497261762619,
+					0.26423341035842896,
+					0.44395989179611206,
 					0.8000000715255737,
 					0.25
 				],
@@ -193,7 +242,7 @@
 			]
 		},
 		{
-			"name":"Cylinder.003",
+			"name":"Cylinder.005",
 			"primitives":[
 				{
 					"attributes":{
@@ -380,6 +429,24 @@
 			"componentType":5126,
 			"count":1,
 			"type":"VEC3"
+		},
+		{
+			"bufferView":19,
+			"componentType":5126,
+			"count":1,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":20,
+			"componentType":5126,
+			"count":1,
+			"type":"VEC4"
+		},
+		{
+			"bufferView":21,
+			"componentType":5126,
+			"count":1,
+			"type":"VEC3"
 		}
 	],
 	"bufferViews":[
@@ -492,6 +559,21 @@
 			"buffer":0,
 			"byteLength":12,
 			"byteOffset":14044
+		},
+		{
+			"buffer":0,
+			"byteLength":12,
+			"byteOffset":14056
+		},
+		{
+			"buffer":0,
+			"byteLength":16,
+			"byteOffset":14068
+		},
+		{
+			"buffer":0,
+			"byteLength":12,
+			"byteOffset":14084
 		}
 	],
 	"samplers":[
@@ -502,7 +584,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":14056,
+			"byteLength":14096,
 			"uri":"scene.bin"
 		}
 	]
