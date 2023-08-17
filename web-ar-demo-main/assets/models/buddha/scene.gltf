@@ -16,147 +16,212 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"nut"
+			"name":"Cylinder",
+			"scale":[
+				1.440000057220459,
+				1.5605794191360474,
+				1.440000057220459
+			],
+			"translation":[
+				0,
+				-0.6000000238418579,
+				0
+			]
 		},
 		{
 			"mesh":1,
-			"name":"bolt"
+			"name":"Plane",
+			"translation":[
+				0,
+				1.0415749549865723,
+				0
+			]
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"metalMat",
-			"pbrMetallicRoughness":{}
+			"name":"Material.001",
+			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"index":0
+				},
+				"metallicFactor":0,
+				"roughnessFactor":0.5
+			}
 		}
 	],
 	"meshes":[
 		{
-			"name":"Nut.001",
+			"name":"Cylinder",
 			"primitives":[
 				{
 					"attributes":{
 						"POSITION":0,
-						"NORMAL":1
+						"NORMAL":1,
+						"TEXCOORD_0":2
 					},
-					"indices":2,
-					"material":0
+					"indices":3
 				}
 			]
 		},
 		{
-			"name":"Bolt.001",
+			"name":"Plane",
 			"primitives":[
 				{
 					"attributes":{
-						"POSITION":3,
-						"NORMAL":4
+						"POSITION":4,
+						"NORMAL":5,
+						"TEXCOORD_0":6
 					},
-					"indices":5,
+					"indices":7,
 					"material":0
 				}
 			]
+		}
+	],
+	"textures":[
+		{
+			"sampler":0,
+			"source":0
+		}
+	],
+	"images":[
+		{
+			"mimeType":"image/png",
+			"name":"Magnetic_field_of_an_idealized_quadrupole_with_forces",
+			"uri":"Magnetic_field_of_an_idealized_quadrupole_with_forces.png"
 		}
 	],
 	"accessors":[
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":2588,
+			"count":192,
 			"max":[
-				-0.0010985471308231354,
-				0.01217688713222742,
-				0.01101718470454216
+				1,
+				1,
+				1
 			],
 			"min":[
-				-0.02654164470732212,
-				0,
-				-0.011017183773219585
+				-1,
+				-1,
+				-1
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":2588,
+			"count":192,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
-			"componentType":5123,
-			"count":8160,
-			"type":"SCALAR"
+			"componentType":5126,
+			"count":192,
+			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
-			"componentType":5126,
-			"count":5915,
-			"max":[
-				0.02143525332212448,
-				0.08001954853534698,
-				0.01101718470454216
-			],
-			"min":[
-				-0.004007846117019653,
-				0,
-				-0.011017183773219585
-			],
-			"type":"VEC3"
+			"componentType":5123,
+			"count":372,
+			"type":"SCALAR"
 		},
 		{
 			"bufferView":4,
 			"componentType":5126,
-			"count":5915,
+			"count":4,
+			"max":[
+				1,
+				0,
+				1
+			],
+			"min":[
+				-1,
+				0,
+				-1
+			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":5,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":6,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":7,
 			"componentType":5123,
-			"count":18582,
+			"count":6,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":31056,
+			"byteLength":2304,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":31056,
-			"byteOffset":31056,
+			"byteLength":2304,
+			"byteOffset":2304,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":16320,
-			"byteOffset":62112,
+			"byteLength":1536,
+			"byteOffset":4608,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":744,
+			"byteOffset":6144,
 			"target":34963
 		},
 		{
 			"buffer":0,
-			"byteLength":70980,
-			"byteOffset":78432,
+			"byteLength":48,
+			"byteOffset":6888,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":70980,
-			"byteOffset":149412,
+			"byteLength":48,
+			"byteOffset":6936,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":37164,
-			"byteOffset":220392,
+			"byteLength":32,
+			"byteOffset":6984,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":12,
+			"byteOffset":7016,
 			"target":34963
+		}
+	],
+	"samplers":[
+		{
+			"magFilter":9729,
+			"minFilter":9987
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":257556,
+			"byteLength":7028,
 			"uri":"scene.bin"
 		}
 	]
