@@ -1,0 +1,47 @@
+html {
+    font-size: 18px;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+.debug{
+    position:absolute; 
+    top: 50px;
+    left: 50px;
+    z-index: 9999;
+    font-size: 1rem;
+    width: 100%;
+    padding: .5rem;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    background: white;
+    border: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+
+.hide{
+    display: none;
+}
+
+.help, .anim{
+    position:absolute; 
+    top: 30px;
+    left: 20px;
+    z-index: 9999;
+    font-size: 6rem;
+    padding: 2rem;
+    font-weight: bold;
+    background: rgb(253, 255, 232);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+    user-select: none;
+    opacity: 0.7;
+}
+
+.anim{
+    left: 150px;
+}

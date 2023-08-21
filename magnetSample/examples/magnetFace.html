@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/magnetFace.css">
+    <script src="../js/aframe-v1.4.2.min.js"></script>
+    <script src="../js/aframe-extras.min.js"></script>
+    <script src="../js/aframe-ar.js"></script>
+    <script src="../js/magnetFace.js"></script>
+    
+
+    <title>Magnet Face</title>
+    <script>
+        const debug = (str) => {
+            document.querySelector('.debug').innerHTML = str
+        }
+    </script>
+</head>
+
+<body>
+    <div class="debug hide">print out</div>
+    <div class="help">&#x2139;</div>
+    <div class="anim">&#x27A4;</div>
+
+    <a-scene 
+        stats 
+        scene-controller 
+        embedded 
+        loading-screen="dotsColor: red; backgroundColor: black"
+        vr-mode-ui="enabled: false"
+        renderer="logarithmicDepthBuffer: true; colorManagement: true;"
+        arjs="detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;"
+        gltf-model="dracoDecoderPath: ../js/decoders/; basisTranscoderPath: ../js/decoders/; meshoptDecoderPath: ../js/decoders/meshopt_decoder.js;">
+
+        <a-assets>
+            <a-asset-item id="magnetFace" src="../assets/models/magnetFace/scene.gltf"></a-asset-item>
+            <a-asset-item id="magnetSide" src="../assets/models/magnetSide/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-marker id="magnetFace" size="100" smooth="true" smoothThreshold="10" type="barcode" value="0">
+            <a-entity 
+                visible="true" 
+                gltf-model="#magnetFace" 
+                scale="1 1 1" 
+                rotation="0 0 0"
+                animation-mixer="clip: *; timeScale: 0; loop: once; clampWhenFinished: true;">
+            </a-entity>
+        </a-marker>
+
+        <a-marker id="magnetSide" size="100" smooth="true" smoothThreshold="10" type="barcode" value="1">
+            <a-entity 
+                visible="true" 
+                gltf-model="#magnetSide" 
+                scale="0.4 0.4 0.4" 
+                rotation="0 0 90"
+                animation-mixer="clip: *; loop: once; clampWhenFinished: true;">
+            </a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>
