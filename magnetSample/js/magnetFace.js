@@ -48,7 +48,7 @@ AFRAME.registerComponent('scene-controller', {
                     
                     snd.play()
                     speech.currentTime = 0
-                    //speech.play()
+                    speech.play()
 
                     check = setInterval(() => {
                         cameraPosition = camera.object3D.position
