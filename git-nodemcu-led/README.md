@@ -26,4 +26,4 @@ sudo reboot
 ## Схема подключения
 D2 ---- LED +
 
-<img src="/preview/preview.jpg" style="width: 300px;"/>
+<img src="./preview/preview.jpg" style="width: 300px;"/>
