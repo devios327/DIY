@@ -1,11 +1,10 @@
-name: Build
+name: Build nodemcu-git-led
 
-# Because a PR results in a push; this workflow will run when a PR is merged
-# or when a commit is pushed directly to any branch.
-on:
-  push:
-    branches:
-      - '*'
+#on:
+  #push:
+    #branches:
+      #- '*'
+on: workflow_dispatch
 
 jobs:
   build:
@@ -27,3 +26,16 @@ jobs:
         cd /home/runner/work/DIY/DIY/git-nodemcu-led
         ls -l
         platformio run -e nodemcuv2
+
+    - name: Upload binaries to release
+      uses: actions/upload-artifact@v3
+      with:
+          name: nodemcu-git-led-firmware
+          path: .pio/build/*/firmware_*.bin
+      #uses: svenstaro/upload-release-action@v1-release
+      #with:
+      #  repo_token: ${{ secrets.GITHUB_TOKEN }}
+      #  file: .pio/build/*/firmware_*.bin
+      #  tag: ${{ github.ref }}
+      #  overwrite: true
+      #  file_glob: true
