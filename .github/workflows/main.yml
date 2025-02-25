@@ -22,10 +22,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install platformio
 
-    - name: Change directory to platfomio project
+    - name: Change directory to PlatformIO project and Run PlatformIO build on selected platforms
       run: |
         cd /home/runner/work/DIY/DIY/git-nodemcu-led
         ls -l
-      
-    - name: Run PlatformIO build on selected platforms
-      run: platformio run -e nodemcuv2
+        platformio run -e nodemcuv2
