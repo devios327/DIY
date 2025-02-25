@@ -23,7 +23,9 @@ jobs:
         pip install platformio
 
     - name: Change directory to platfomio project
-      run: cd /home/runner/work/DIY/DIY/git-nodemcu-led
+      run: |
+        cd /home/runner/work/DIY/DIY/git-nodemcu-led
+        ls -l
       
     - name: Run PlatformIO build on selected platforms
       run: platformio run -e nodemcuv2
