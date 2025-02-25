@@ -1,41 +1,44 @@
 name: Build nodemcu-git-led
 
 #on:
-  #push:
-    #branches:
-      #- '*'
+#push:
+#branches:
+#- '*'
 on: workflow_dispatch
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v1
+      - name: Set up Python
+        #uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
 
-    - name: Install pio and its dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install platformio
+      - name: Install pio and its dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install platformio
 
-    - name: Change directory to PlatformIO project and Run PlatformIO build on selected platforms
-      run: |
-        cd /home/runner/work/DIY/DIY/git-nodemcu-led
-        ls -l
-        platformio run -e nodemcuv2
+      - name: Change directory to PlatformIO project and Run PlatformIO build on selected platforms
+        #run: |
+        #  ls -l
+        #  cd /home/runner/work/DIY/DIY/git-nodemcu-led
+        #  ls -l
+        #  platformio run -e nodemcuv2
+        run: |
+          ls -l
+          cd git-nodemcu-led
+          ls -l
+          platformio run -e nodemcuv2
 
-    - name: Upload binaries to release
-      uses: actions/upload-artifact@v4
-      with:
+      - name: Upload binaries to release
+        uses: actions/upload-artifact@v4
+        with:
           name: nodemcu-git-led-firmware
-          path: /home/runner/work/DIY/DIY/git-nodemcu-led/.pio/build/nodemcuv2/firmware.bin
-      #uses: svenstaro/upload-release-action@v1-release
-      #with:
-      #  repo_token: ${{ secrets.GITHUB_TOKEN }}
-      #  file: .pio/build/*/firmware_*.bin
-      #  tag: ${{ github.ref }}
-      #  overwrite: true
-      #  file_glob: true
+          #  path: /home/runner/work/DIY/DIY/git-nodemcu-led/.pio/build/nodemcuv2/firmware.bin
+          path: git-nodemcu-led/.pio/build/nodemcuv2/firmware.bin
